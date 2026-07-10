@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geno-ws"
+version = "0.2.0"
+description = "Workspace initialisation for the geno ecosystem — the `geno-ws` CLI."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "42euge" }]
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[project.scripts]
+geno-ws = "geno_ws.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["geno_ws*"]
