@@ -13,6 +13,18 @@ metadata:
 
 # Create Workspace
 
+> **⚠️ DEPRECATED.** The color-folder workspace method (`~/code-<color>/<slug>-ws/`)
+> is superseded by the **code-org scheme** in **geno-tt** (`tt`):
+> `~/code/<track>/<domain>/<workspace>.<born>/<repo>`.
+>
+> Use instead:
+> - `tt new-project <track>.<domain>.<workspace>[.<repo>]` — scaffold a workspace (`geno-tt-workspaces-create`)
+> - `tt ecosystem-clone <owner> <domain>` — clone a whole org into one workspace (`geno-tt-workspaces-ecosystem-clone`)
+> - `tt overlay <workspace-dir>` — (re)generate `.code-workspace` + `CLAUDE.local.md` (`geno-tt-workspaces-overlay`)
+> - `tt migrate` — move existing color-folder `*-ws` workspaces into the new scheme (`geno-tt-workspaces-migrate`)
+>
+> This skill remains only to support migration. Do not create new color-folder workspaces.
+
 Create isolated development workspaces by cloning repos into the user's preferred code space. Accepts freeform input — the skill infers whether it's a GitHub issue, JIRA ticket, repo names, or a feature idea.
 
 ## Input

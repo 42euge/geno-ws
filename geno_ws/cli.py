@@ -98,6 +98,16 @@ def main(argv: list[str] | None = None) -> int:
 
     args = parser.parse_args(argv)
 
+    if not os.environ.get("GENO_WS_SILENCE_DEPRECATION"):
+        print(
+            f"{_BOLD}⚠  geno-ws is DEPRECATED{_RESET} — superseded by geno-tt (the `tt` CLI).\n"
+            f"{_DIM}  New workspaces:  tt new-project <track>.<domain>.<workspace>[.<repo>]\n"
+            f"  Clone an org:    tt ecosystem-clone <owner> <domain>\n"
+            f"  Migrate old ones: tt migrate\n"
+            f"  Set GENO_WS_SILENCE_DEPRECATION=1 to hide this notice.{_RESET}",
+            file=sys.stderr,
+        )
+
     if args.cmd == "init":
         spec  = args.spec
         host  = args.host

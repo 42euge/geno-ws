@@ -1,4 +1,11 @@
-# geno-ws — Workspace Management
+# geno-ws — Workspace Management *(DEPRECATED)*
+
+> **⚠️ DEPRECATED — superseded by [geno-tt](https://github.com/42euge/geno-tt).**
+> The color-folder method is replaced by the code-org scheme
+> (`~/code/<track>/<domain>/<workspace>.<born>/<repo>`) driven by the `tt` CLI:
+> `tt new-project`, `tt ecosystem-clone`, `tt overlay`, `tt migrate`
+> (skills `geno-tt-workspaces-*`). This repo is kept only to support migrating
+> existing color-folder workspaces off the old layout.
 
 `geno-ws` manages development workspaces for the geno ecosystem. Creates workspaces from GitHub issues, JIRA tickets, repo names, or feature ideas, cloning repos into color-coded folders with metadata and agent rules.
 
